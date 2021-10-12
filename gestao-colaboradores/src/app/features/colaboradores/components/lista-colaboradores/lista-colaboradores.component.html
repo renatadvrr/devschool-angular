@@ -1,2 +1,10 @@
-<p>lista-colaboradores works!</p>
-
+<h2>Relatório dos colaboradores da empresa <span>Código Feliz</span></h2>
+<div class="card" *ngFor=" let colaborador of colaboradores">
+<h4>Dados do Colaborador</h4>
+<ul >
+    <li>Colaborador: {{colaborador.nome}}</li>
+    <li>ID do colaborador: {{colaborador.id}}</li>
+    <li>Salário: {{colaborador.salario}}</li>
+    <li>Cargo: {{colaborador.cargo}}</li>
+</ul>
+</div>

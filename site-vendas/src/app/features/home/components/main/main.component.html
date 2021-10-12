@@ -1,39 +1,49 @@
 <section class="bg">
-  <h1>Compras Online</h1>
-  <p>O seu portal de compras.</p>
+  <h1>{{tituloPg}}</h1>
+  <p>{{fulano}}</p>
 </section>
-<section class="promo">
-  <h3>Promoções da Semana</h3>
-  <div class="carroussel">
-    <div class="card">
-      <ul>
-        <li><h4>Pamonha Fresquinha</h4></li>
-        <li>
-          <a href=""><img src="./assets/img/pamonha.jpg" alt="" /></a>
-        </li>
-        <li>R$589,00</li>
-        <a class="buttom" href="#">Adicionar ao carrinho</a>
-      </ul>
-    </div>
-    <div class="card">
-      <ul>
-        <li><h4>Pamonha Fresquinha</h4></li>
-        <li>
-          <a href=""><img src="./assets/img/pamonha.jpg" alt="" /></a>
-        </li>
-        <li>R$589,00</li>
-        <a class="buttom" href="#">Adicionar ao carrinho</a>
-      </ul>
-    </div>
-    <div class="card">
-      <ul>
-        <li><h4>Pamonha Fresquinha</h4></li>
-        <li>
-          <a href=""><img src="./assets/img/pamonha.jpg" alt="" /></a>
-        </li>
-        <li>R$589,00</li>
-        <a class="buttom" href="#">Adicionar ao carrinho</a>
-      </ul>
-    </div>
+<h3>Promoções da Semana</h3>
+<app-product [product]="topProduct"></app-product>
+<app-product-list [productsList]="productsListPamonhas" [title]="'Pamonhas'"></app-product-list>
+<app-product-list [productsList]="productsListDogao" [title]="'Dogões'"></app-product-list>
+
+<!-- 
+  
+  Interpolação
+  <div class="card">
+    <p>main.component</p>
+    <ul *ngFor="let product of products">
+      <li>
+        <h4>{{product.nome}}</h4>
+      </li>
+      <li>
+        <a href=""><img src="./assets/img/pamonha.jpg" alt="" /></a>
+      </li>
+      <li>{{product.preco |currency}}</li>
+      <a class="buttom" href="#">Adicionar ao carrinho</a>
+    </ul>
   </div>
-</section>
+
+      NÃO É PRECISO REPETIR DIV
+      <div class="card">
+      <ul>
+        <li><h4>Pamonha Fresquinha</h4></li>
+        <li>
+          <a href=""><img src="./assets/img/pamonha.jpg" alt="" /></a>
+        </li>
+        <li>{{valor |currency}}</li>
+        <a class="buttom" href="#">Adicionar ao carrinho</a>
+      </ul>
+      </div>
+    <div class="card">
+      <ul>
+        <li><h4>Pamonha Fresquinha</h4></li>
+        <li>
+          <a href=""><img src="./assets/img/pamonha.jpg" alt="" /></a>
+        </li>
+        <li>{{valor |currency}}</li>
+        <a class="buttom" href="#">Adicionar ao carrinho</a>
+      </ul>
+    </div>
+
+  -->

@@ -1,0 +1,9 @@
+
+<section class="promo">
+  <h3>{{title}}</h3>
+  <div class="carroussel">
+    <div class="carroussel" *ngFor="let item of productsList">
+      <app-product [product]="item"></app-product>
+    </div>
+  </div>
+</section>
