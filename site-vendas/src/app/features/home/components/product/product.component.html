@@ -1,13 +1,7 @@
 
 <div class="card">
-    <ul >
-      <li>
-        <h4>{{product?.nome}}</h4>
-      </li>
-      <li>
-        <a href=""><img [src]="product?.img" /></a>
-      </li>
-      <li>{{product?.preco |currency}}</li>
-      <a class="buttom" href="#">Adicionar ao carrinho</a>
-    </ul>
+    <img [src]="product?.img" height="250px" width="250px">
+    <h1 class="title">{{product?.nome}}</h1>
+    <h2>Preço: {{product?.preco}}</h2>
+    <input type="text" [value]="product?.preco">
   </div>

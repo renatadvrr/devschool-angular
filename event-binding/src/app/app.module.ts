@@ -1,20 +1,17 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppComponent } from './app.component';
-import { HomeModule } from './features/home/home.module';
 import { SharedModule } from './shared/shared.module';
-import { ColaboradorComponent } from './features/colaboradores/components/colaborador/colaborador.component';
+import { ProductsModule } from './features/products/products.module';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    ColaboradorComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
-    HomeModule,
-    SharedModule
+    SharedModule,
+    ProductsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

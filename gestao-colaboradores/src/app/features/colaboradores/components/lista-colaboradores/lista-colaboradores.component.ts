@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Colaborador } from '../../models/colaborador.model';
 
 @Component({
   selector: 'app-lista-colaboradores',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListaColaboradoresComponent implements OnInit {
 
-  colaboradores = [ 
+  colaboradores: Array<Colaborador> = [ 
     { id: 1, nome: 'Nathan Carlos', salario: 7000, cargo: 'Dev Pl' }, 
     { id: 2, nome: 'David Carlos', salario: 3000, cargo: 'Dev Jr' }, 
     { id: 3, nome: 'Mateus Augusto', salario: 3500, cargo: 'Dev Jr' }, 
@@ -15,7 +16,7 @@ export class ListaColaboradoresComponent implements OnInit {
     { id: 5, nome: 'Rogerio Souza', salario: 9000, cargo: 'Dev Sr' }, 
     { id: 6, nome: 'Gabriel Miguel', salario: 9500, cargo: 'Dev Sr' }, 
     { id: 6, nome: 'Alan Jhonnes', salario: 11000, cargo: 'Arquiteto' } 
-  ]
+  ];
 
   constructor() { }
 
